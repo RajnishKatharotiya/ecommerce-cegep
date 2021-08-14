@@ -1,0 +1,71 @@
+.landing-hero_content {
+    width: 100%;
+    height: 100vh;
+    background-color: #eef8f3;
+}
+
+.landing-hero.row {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* Title box - left section */
+
+div.landing-hero_title-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 100px;
+}
+
+.landing-hero_title-box h2 {
+    margin-top: 50px;
+    font-size: 60px;
+    width: 700px;
+    max-width: 80%;
+    font-family: 'Caveat', cursive;
+}
+
+.landing-hero_title-box h4 {
+    font-size: 40px;
+    width: 700px;
+    max-width: 80%;
+    font-family: 'Caveat', cursive;
+}
+
+.landing-hero_title-box h4 img {
+    width: 40px;
+    height: 40px;
+    margin-left: 5px;
+}
+
+/* Mail button input */
+
+.landing-hero_join-mail {
+    margin-top: 150px;
+    width: 400px;
+}
+
+.landing-hero_join-mail h3 {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+/* Img box - right section */
+
+.landing-hero_img-box {
+    width: 100%;
+    height: 100vh;
+    background-color: #bc1823;
+    position: relative;
+}
+
+.landing-hero_img-box img {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translate(-35%, -50%);
+}
