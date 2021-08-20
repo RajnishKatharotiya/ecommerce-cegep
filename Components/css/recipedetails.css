@@ -1,0 +1,21 @@
+#title{
+    float: left;
+    font-size:1.5cm;
+    padding-top: 0%;
+    padding-left: 50px;
+}
+#main{
+    border: 2px solid black;
+    width: 1400px;
+    height: 700PX;
+}
+#left{
+
+    float: right;
+    padding-left: 5%;
+    padding-top: 5%;
+    background-color: #bc1823;
+    border: 2px solid black;
+    min-width: 40%;
+    max-height: 100%;
+}
