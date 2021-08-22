@@ -1,0 +1,69 @@
+.contact-us-hero_content {
+    width: 100%;
+    height: 100vh;
+    background-color: #eef8f3;
+}
+
+.contact-us-hero.row {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+/* Title box - left section */
+
+div.contact-us-hero_form-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.contact-us-hero_form-box .card {
+    width: 700px;
+}
+
+.contact-us-hero_form-box .card-title {
+    font-size: 24px;
+    color: #bc1823;
+    margin-bottom: 15px;
+}
+
+.contact-us-footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+/* Info box - right section */
+
+.contact-us-hero_info-box {
+    width: 100%;
+    height: 100vh;
+    background-color: #bc1823;
+    color: #fff;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.contact-us-hero_info-box li {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.contact-us-hero_info-box li i{
+    font-size: 40px;
+}
+
+.contact-us-hero_info-box li p{
+    font-size: 18px;
+}

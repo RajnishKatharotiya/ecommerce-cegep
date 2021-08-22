@@ -1,0 +1,30 @@
+.register-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.register-container .card {
+    width: 700px;
+}
+
+.register-container .card-title {
+    font-size: 24px;
+    color: #bc1823;
+    margin-bottom: 15px;
+}
+
+.register_cna-link{
+    text-decoration: none;
+    text-align: center;
+}
+
+.register-footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}

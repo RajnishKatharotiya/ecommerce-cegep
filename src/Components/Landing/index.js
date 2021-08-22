@@ -7,11 +7,11 @@ import './style.css'
 
 const Landing = () => (
     <div className="landing-hero_container">
-        <Header />
+        <Header transparent={true} />
         <div className="landing-hero row">
             <div className="landing-hero_title-box col-8">
                 <h2>Hi,</h2>
-                <h4>Browse various receipes, learn to prepare easily and order ingeridents you need at your door. <img src="https://emojipedia-us.s3.amazonaws.com:443/source/skype/289/smiling-face-with-heart-eyes_1f60d.png" srcset="https://emojipedia-us.s3.amazonaws.com:443/source/skype/289/smiling-face-with-heart-eyes_1f60d.png 2x" alt="Smiling Face with Heart-Eyes" title="Smiling Face with Heart-Eyes" width="72" height="72"></img></h4>
+                <h4>Browse various receipes, learn to prepare easily and order ingeridents you need at your door. <img src="https://emojipedia-us.s3.amazonaws.com:443/source/skype/289/smiling-face-with-heart-eyes_1f60d.png" srcSet="https://emojipedia-us.s3.amazonaws.com:443/source/skype/289/smiling-face-with-heart-eyes_1f60d.png 2x" alt="Smiling Face with Heart-Eyes" title="Smiling Face with Heart-Eyes" width="72" height="72"></img></h4>
                 <div className="landing-hero_join-mail">
                     <h3>Join our mailist for new receipe updates</h3>
                     <InputGroup className="mb-3">
