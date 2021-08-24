@@ -64,13 +64,17 @@
     margin-bottom: 0;
 }
 
-.recipe-detail-card_ingredients {
+.recipe-detail-card_ingredients, .recipe-detail-card_tags {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
 
-.recipe-detail-card_ingredients p {
+.recipe-detail-card_tags .badge{
+    margin: 5px 5px 5px 0;
+}
+
+.recipe-detail-card_content-info p {
     margin-bottom: 0;
     margin-right: 5px;
     font-size: 14px;
@@ -108,4 +112,8 @@
 
 .recipe-detail_action-btn .action-button.btn i{
     margin-right: 5px;
+}
+
+.recipe-detail-card_content-info .ratio>*{
+    border-radius: 10px;
 }
