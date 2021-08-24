@@ -1,0 +1,11 @@
+.alert-box.alert-dismissible{
+    position: fixed;
+    bottom: 10px;
+    min-width: 500px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.alert-box.alert-dismissible p{
+    margin: 0;
+}
