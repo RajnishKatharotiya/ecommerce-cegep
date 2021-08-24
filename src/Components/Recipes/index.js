@@ -25,29 +25,30 @@ const Recipes = () => {
             const resC = await fetch('https://www.themealdb.com/api/json/v1/1/list.php?c=list');
             const resultC = await resC.json();
             setCategories(resultC.meals);
-            setSelectedCategory(resultC.meals[0].strCategory);
 
             const resI = await fetch('https://www.themealdb.com/api/json/v1/1/list.php?i=list');
             const resultI = await resI.json();
             setIngredients(resultI.meals);
-            setSelectedIngredient(resultI.meals[0].strIngredient);
 
             const resA = await fetch('https://www.themealdb.com/api/json/v1/1/list.php?a=list');
             const resultA = await resA.json();
             setAreas(resultA.meals);
+
+            setSelectedIngredient(resultI.meals[0].strIngredient);
             setSelectedArea(resultA.meals[0].strArea);
+            setSelectedCategory(resultC.meals[0].strCategory);
         } catch (e) {
             console.log("ERROR", e)
             setLoading(false);
         }
     }
 
-    const getRecipes = async () => {
+    const getRecipes = async (query) => {
         try {
             setLoading(true);
-            const res = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${selectedCategory}&i=${selectedIngredient}&a=${selectedArea}`);
+            const res = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?${query || `c=${selectedCategory}`}`);
             const result = await res.json();
-            setFilteredRecipes(result.meals);
+            setFilteredRecipes(result.meals || []);
         } catch (e) {
             console.log("ERROR", e)
         } finally {
@@ -60,10 +61,24 @@ const Recipes = () => {
     }, [])
 
     useEffect(() => {
-        if (selectedCategory && selectedArea && selectedIngredient) {
-            getRecipes()
+        if (selectedCategory) {
+            getRecipes(`c=${selectedCategory}`);
         }
-    }, [selectedCategory, selectedArea, selectedIngredient])
+    }, [selectedCategory])
+
+
+    useEffect(() => {
+        if (selectedIngredient) {
+            getRecipes(`i=${selectedIngredient}`);
+        }
+    }, [selectedIngredient])
+
+
+    useEffect(() => {
+        if (selectedArea) {
+            getRecipes(`a=${selectedArea}`);
+        }
+    }, [selectedArea])
 
     return (
         <div className="recipes_container">

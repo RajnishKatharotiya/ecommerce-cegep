@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react';
 import Card from 'react-bootstrap/Card';
 import './recipeCard.css';
+import RecipeDetailCard from './RecipeDetailCard';
 
 const RecipeCard = ({ title, img, id }) => {
     const [cart, setCart] = useState(false);
     const [fav, setFav] = useState(false);
+    const [showDetail, setDetailCard] = useState(false);
 
     const updateActionFromStorage = () => {
         const favItems = JSON.parse(localStorage.getItem('favItems')) || [];
@@ -34,13 +36,15 @@ const RecipeCard = ({ title, img, id }) => {
     return (
         <Card className="bg-dark text-white">
             <Card.Img src={img} alt={title} />
-            <Card.ImgOverlay>
+            <Card.ImgOverlay onClick={() => setDetailCard(true)}>
                 <div className="recipe_card-short-actions">
-                    <i className={`bi bi-heart${fav? '-fill' : ''} fav`} onClick={e => { e.preventDefault(); handleUpdateStorage('favItems') }}></i>
-                    <i className={`bi bi-cart${cart? '-fill' : ''} cart`} onClick={e => { e.preventDefault(); handleUpdateStorage('cartItems') }}></i>
+                    <i className={`bi bi-heart${fav? '-fill' : ''} fav`} onClick={e => { e.preventDefault(); e.stopPropagation(); handleUpdateStorage('favItems') }}></i>
+                    <i className={`bi bi-cart${cart? '-fill' : ''} cart`} onClick={e => { e.preventDefault(); e.stopPropagation(); handleUpdateStorage('cartItems') }}></i>
                 </div>
                 <Card.Title>{title}</Card.Title>
             </Card.ImgOverlay>
+            
+            <RecipeDetailCard id={id} show={showDetail} onHide={() => setDetailCard(false)} title={title} handleUpdateStorage={handleUpdateStorage} fav={fav} cart={cart} />
         </Card>
     )
 }
