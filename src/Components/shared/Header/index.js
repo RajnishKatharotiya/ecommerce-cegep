@@ -49,8 +49,8 @@ const Header = ({ transparent = false }) => {
                     username ?
                         <>
                             <Button variant="outline-light" className="action-button" onClick={handleLogout}>{username}</Button>
-                            <Button variant="light" className="action-button"><i className="bi bi-heart-fill"></i><Badge bg="danger">{favItems}</Badge></Button>
-                            <Button variant="light" className="action-button"><i className="bi bi-cart-fill"></i><Badge bg="success">{cartItems}</Badge></Button>
+                            <Link to="/my-favorites" ><Button variant="light" className="action-button"><i className="bi bi-heart-fill"></i><Badge bg="danger">{favItems}</Badge></Button></Link>
+                            <Link to="/my-cart" ><Button variant="light" className="action-button"><i className="bi bi-cart-fill"></i><Badge bg="success">{cartItems}</Badge></Button></Link>
                         </> :
                         <>
                             <Link to="/register" ><Button variant="outline-light" className="action-button">Register</Button></Link>
