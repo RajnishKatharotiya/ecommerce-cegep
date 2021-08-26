@@ -10,12 +10,15 @@ import RecipeCard from './RecipeCard';
 
 
 const Recipes = () => {
+    // filters list
     const [categories, setCategories] = useState([]);
     const [ingredients, setIngredients] = useState([]);
     const [areas, setAreas] = useState([]);
+    // current selected filters
     const [selectedCategory, setSelectedCategory] = useState('');
     const [selectedIngredient, setSelectedIngredient] = useState('');
     const [selectedArea, setSelectedArea] = useState('');
+    // filtered recipes
     const [filteredRecipes, setFilteredRecipes] = useState([]);
     const [loading, setLoading] = useState(false);
 
