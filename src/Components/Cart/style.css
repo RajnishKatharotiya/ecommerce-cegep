@@ -17,13 +17,21 @@
 }
 
 /* Listing */
+.recipes_listing-wrapper{
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 0;
+    width: 100%;
+    align-items: flex-start;
+}
 
 .recipes_listing {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 50px 0;
+    flex-grow: 1;
+    margin: 0;
 }
 
 .recipes_listing .spinner-grow {
@@ -36,4 +44,55 @@
 .recipes_listing .error-text{
     margin-top: 100px;
     opacity: 0.6;
+    flex-grow: 1;
+    text-align: center;
+}
+
+/* Cart items */
+.cart-checkout_card{
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 350px;
+}
+
+.cart-checkout_card > div{
+    width: 100%;
+}
+
+.cart-checkout_card h4{
+    font-size: 18px;
+    line-height: 20px;
+    margin: 10px;
+}
+
+.cart-checkout_row{
+    display: flex;
+    padding: 5px;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 1px solid #c3c3c3;
+
+}
+
+.cart-checkout_row:last-child{
+    border-bottom: none;
+}
+
+.cart-checkout_row p {
+    margin: 0 10px;
+}
+
+.cart-checkout_card img{
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+}
+
+.cart-checkout_pay-now-btn{
+    margin: 10px 0 0 0;
+    width: 100%;
 }
