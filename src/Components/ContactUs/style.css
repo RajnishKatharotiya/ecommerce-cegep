@@ -16,9 +16,8 @@
 
 div.contact-us-hero_form-box {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
+    padding-left: 150px;
 }
 
 
